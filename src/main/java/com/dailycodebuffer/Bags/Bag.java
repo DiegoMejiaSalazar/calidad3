@@ -89,22 +89,4 @@ public class Bag<Element> implements Iterable<Element> {
       return element;
     }
   }
-
-  /** main-method for testing */
-  public static void main(String[] args) {
-    Bag<String> bag = new Bag<>();
-
-    bag.add("1");
-    bag.add("1");
-    bag.add("2");
-
-    System.out.println("size of bag = " + bag.size());
-    for (String s : bag) {
-      System.out.println(s);
-    }
-
-    System.out.println(bag.contains(null));
-    System.out.println(bag.contains("1"));
-    System.out.println(bag.contains("3"));
-  }
 }
