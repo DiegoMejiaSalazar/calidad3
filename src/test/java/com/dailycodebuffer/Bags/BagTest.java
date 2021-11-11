@@ -20,14 +20,6 @@ public class BagTest {
     }
     
     @Test
-    public void testAddOneElement() {
-        bag.add("Diego");
-        Assertions.assertEquals(false, bag.isEmpty());
-        Assertions.assertEquals(true, bag.contains("Diego"));
-        Assertions.assertEquals(1, bag.size());
-    }
-    
-    @Test
     public void testAddFiveElement() {
         bag.add("Diego");
         bag.add("Daniel");
@@ -76,9 +68,10 @@ public class BagTest {
     public void testCannotRemoveElementOfBag() {
         Assertions.assertEquals(true, bag.isEmpty());
         Assertions.assertEquals(0, bag.size());
-        UnsupportedOperationException exception = Assertions.assertThrows(
+        Assertions.assertThrows(
                 UnsupportedOperationException.class,
-                () -> bag.iterator().remove());
+                () -> bag.iterator().remove()
+        );
         
     }
 }
