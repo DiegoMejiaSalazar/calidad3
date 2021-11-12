@@ -114,10 +114,8 @@ public class SinglyLinkedList {
   
   
   /**
-  Reverse a singly linked list from a given node till the end
+  * Reverse a singly linked list from a given node till the end
   **/
-    
-    
   Node reverseList(Node node) {
       Node prev = null, curr = node, next;
       while (curr != null) {
