@@ -1,14 +1,6 @@
 package com.dailycodebuffer.Lists;
 
 public class CountSinglyLinkedListRecursion extends SinglyLinkedList {
-  public static void main(String[] args) {
-    CountSinglyLinkedListRecursion list = new CountSinglyLinkedListRecursion();
-    for (int i = 1; i <= 5; ++i) {
-      list.insert(i);
-    }
-    assert list.count() == 5;
-  }
-
   /**
    * Calculate the count of the list manually using recursion.
    *
