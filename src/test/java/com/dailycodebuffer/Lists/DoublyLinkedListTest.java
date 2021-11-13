@@ -7,6 +7,7 @@ package com.dailycodebuffer.Lists;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -144,5 +145,83 @@ public class DoublyLinkedListTest {
         list.insertHead(7);
         list.insertHead(10);
         Assertions.assertThrows(IndexOutOfBoundsException.class, () -> list.insertElementByIndex(10, 30));
+    }
+    
+    @Test
+    public void reverseElements() {
+        int[] elementstoadd = {10,20,30,40,50};
+        DoublyLinkedList list1 = new DoublyLinkedList(elementstoadd);
+        list1.reverse();
+        Assertions.assertNotEquals(10, list1.deleteHead());
+        Assertions.assertNotEquals(50, list1.deleteTail());
+    }
+    
+    @Test //BUG
+    @Disabled
+    public void removeDuplites() {
+        try {
+            list.insertHead(10);
+            list.insertHead(10);
+            list.insertHead(10);
+            list.insertHead(10);
+            list.insertHead(10);
+            DoublyLinkedList.removeDuplicates(list);
+            Assertions.assertFalse(list.isEmpty());
+        } catch (NullPointerException ex) {
+            Assertions.assertFalse(true, ex.getMessage());
+        }
+    }
+    
+    @Test
+    public void initializaWithEmptyArray() {
+        Assertions.assertThrows(NullPointerException.class, () -> new DoublyLinkedList(null));
+    }
+    
+    @Test
+    public void reverseListOfFiveElements() {
+        list.insertHead(10);
+        list.insertHead(20);
+        list.insertHead(30);
+        list.insertHead(40);
+        list.insertHead(50);
+        list.reverse();
+        Assertions.assertAll(
+                () -> Assertions.assertEquals(10, list.deleteHead().value),
+                () -> Assertions.assertEquals(50, list.deleteTail().value)
+        );
+        
+    }
+    
+    @Test
+    public void deletetTailNode() {
+        list.insertTail(10);
+        list.insertTail(20);
+        list.insertTail(30);
+        list.insertTail(40);
+        list.insertTail(50);
+        list.delete(50);
+        list.display();
+        Assertions.assertEquals(40, list.deleteTail().value);
+    }
+    
+    @Test
+    public void deletetMiddleElement() {
+        list.insertTail(10);
+        list.insertTail(20);
+        list.insertTail(30);
+        list.insertTail(40);
+        list.insertTail(50);
+        list.delete(30);
+        Assertions.assertEquals(10, list.deleteHead().value);
+        Assertions.assertEquals(50, list.deleteTail().value);
+        Assertions.assertFalse(list.isEmpty());
+    }
+    
+    @Test
+    public void deleteUnExistingElement() {
+        list.insertTail(10);
+        list.insertTail(11);
+        list.insertTail(12);
+        Assertions.assertThrows(RuntimeException.class, () -> list.delete(13));
     }
 }
