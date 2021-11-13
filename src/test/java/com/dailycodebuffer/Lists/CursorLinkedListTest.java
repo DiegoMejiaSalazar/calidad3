@@ -83,4 +83,14 @@ public class CursorLinkedListTest {
     public void getElementFromEmptyList() {
         Assertions.assertNull(list.get(0));
     }
+    
+    @Test
+    public void removeUnExistingElement() {
+        list.append("Diego");
+        list.append("Daniel");
+        list.append("John");
+        list.append("Donald");
+        list.remove("John");
+        Assertions.assertNotEquals("John", list.get(2));
+    }
 }
