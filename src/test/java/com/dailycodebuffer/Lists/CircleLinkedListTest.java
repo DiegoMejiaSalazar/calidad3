@@ -18,7 +18,7 @@ public class CircleLinkedListTest {
     }
     
     @Test
-    public void addFiveElements() {
+    public void addThreeElements() {
         circleLinkedList.append("Diego");
         circleLinkedList.append("Obama");
         circleLinkedList.append("Fabio");
