@@ -5,25 +5,6 @@ import java.util.List;
 
 /** @author https://github.com/shellhub */
 public class MergeSortedArrayList {
-  public static void main(String[] args) {
-    List<Integer> listA = new ArrayList<>();
-    List<Integer> listB = new ArrayList<>();
-    List<Integer> listC = new ArrayList<>();
-
-    /* init ListA and List B */
-    for (int i = 1; i <= 10; i += 2) {
-      listA.add(i); /* listA: [1, 3, 5, 7, 9]  */
-      listB.add(i + 1); /* listB: [2, 4, 6, 8, 10] */
-    }
-
-    /* merge listA and listB to listC */
-    merge(listA, listB, listC);
-
-    System.out.println("listA: " + listA);
-    System.out.println("listB: " + listB);
-    System.out.println("listC: " + listC);
-  }
-
   /**
    * merge two sorted ArrayList
    *
