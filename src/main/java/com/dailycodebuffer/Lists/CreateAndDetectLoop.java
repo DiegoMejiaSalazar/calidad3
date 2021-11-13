@@ -1,6 +1,5 @@
 package com.dailycodebuffer.Lists;
 
-import java.util.Scanner;
 
 public class CreateAndDetectLoop {
 
@@ -9,13 +8,15 @@ public class CreateAndDetectLoop {
 	 * 
 	 * @param	head	head node of the linked list
 	 */
-	static void printList(Node head) {		
+	static String printList(Node head) {
+        StringBuilder builder = new StringBuilder();
         Node cur = head;
-        
         while (cur != null) {
             System.out.print(cur.value + " ");
+            builder.append(cur.value + " ");
             cur = cur.next;
         }
+        return builder.toString();
     }
 
 	/**
@@ -50,7 +51,7 @@ public class CreateAndDetectLoop {
 	 * 
 	 * @param 	head 	the head node of the linked list
 	 * 
-	 * @return 		 	true if loop exists else false
+	 * @return 	true if loop exists else false
 	 */
     static boolean detectLoop(Node head) {
     	Node sptr = head;
@@ -64,32 +65,5 @@ public class CreateAndDetectLoop {
     	}
     	
     	return false;
-    }
-
-    public static void main(String[] args) {
-        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter the number of elements to be inserted: ");
-        int n = sc.nextInt();
-        System.out.printf("Enter the %d elements: \n", n);
-        while (n-- > 0)
-        	singlyLinkedList.insert(sc.nextInt());
-        
-        System.out.print("Given list: ");
-        printList(singlyLinkedList.getHead());
-        System.out.println();
-        
-        System.out.println("Enter the location to generate loop: ");
-        int k = sc.nextInt();
-        
-        createLoop(singlyLinkedList.getHead(), k);
-        
-        if (detectLoop(singlyLinkedList.getHead()))
-            System.out.println("Loop found");
-        else
-            System.out.println("No loop found");
-        
-        sc.close();
     }
 }
