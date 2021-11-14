@@ -224,4 +224,15 @@ public class DoublyLinkedListTest {
         list.insertTail(12);
         Assertions.assertThrows(RuntimeException.class, () -> list.delete(13));
     }
+    
+    @Test
+    public void deleteFromEmptyList() {
+        Assertions.assertThrows(NullPointerException.class, () -> list.deleteHead());
+    }
+    
+    @Test
+    public void deleteOnlyElement() {
+        list.insertHead(1);
+        Assertions.assertDoesNotThrow(() -> list.delete(1));
+    }
 }

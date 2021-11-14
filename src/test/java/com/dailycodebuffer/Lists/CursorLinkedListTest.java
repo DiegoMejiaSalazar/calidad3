@@ -24,6 +24,7 @@ public class CursorLinkedListTest {
         list.append("Daniel");
         list.append("John");
         list.append("Donald");
+        list.printList();
         Assertions.assertEquals(0, list.indexOf("Diego"));
         Assertions.assertEquals(1, list.indexOf("Daniel"));
         Assertions.assertEquals(2, list.indexOf("John"));
@@ -40,6 +41,7 @@ public class CursorLinkedListTest {
         list.append("Daniel");
         list.append("John");
         list.append("Donald");
+        list.printList();
         try { // BUG
             Assertions.assertEquals(-1, list.indexOf("Elioth"));
         } catch(IndexOutOfBoundsException ex) {
@@ -54,6 +56,7 @@ public class CursorLinkedListTest {
         list.append("John");
         list.append("Donald");
         list.remove("Diego");
+        list.printList();
         Assertions.assertNotEquals("Diego", list.get(0));
     }
     
@@ -66,6 +69,7 @@ public class CursorLinkedListTest {
         list.append("John");
         list.append("Donald");
         list.removeByIndex(0);
+        list.printList();
         Assertions.assertNotEquals("Diego", list.get(0));
     }
     
@@ -76,12 +80,32 @@ public class CursorLinkedListTest {
         list.append("John");
         list.append("Donald");
         list.remove("wia");
+        list.printList();
         Assertions.assertEquals("Diego", list.get(0));
     }
     
     @Test
     public void getElementFromEmptyList() {
+        list.printList();
         Assertions.assertNull(list.get(0));
+    }
+    
+    @Test
+    public void removeByIndexUsingInvalidIndex() {
+        list.append("Diego");
+        list.removeByIndex(2);
+        list.removeByIndex(-1);
+        list.removeByIndex(1);
+        Assertions.assertNotNull(list.get(0));
+    }
+    
+    @Test
+    public void getUsingInvalidIndex() {
+        list.append("Diego");
+        list.get(2);
+        list.get(-1);
+        list.get(1);
+        Assertions.assertNotNull(list.get(0));
     }
     
     @Test
@@ -91,6 +115,7 @@ public class CursorLinkedListTest {
         list.append("John");
         list.append("Donald");
         list.remove("John");
+        list.printList();
         Assertions.assertNotEquals("John", list.get(2));
     }
 }

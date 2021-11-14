@@ -41,11 +41,4 @@ public class RemoveDuplicateNodes {
             System.out.print(temp.value);
         }
     }
-
-    public static void main(String arg[]) {
-        RemoveDuplicateNodes instance = new RemoveDuplicateNodes();
-        Node head = new Node(0, new Node(2, new Node(3, new Node(3, new Node(4)))));
-        head = instance.deleteDuplicates(head);
-        instance.print(head);
-    }
 }
