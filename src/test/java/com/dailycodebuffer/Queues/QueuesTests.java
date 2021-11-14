@@ -4,7 +4,6 @@
  */
 package com.dailycodebuffer.Queues;
 
-import com.dailycodebuffer.DynamicArray.DynamicArray;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,7 +16,7 @@ public class QueuesTests {
 
     private Queue queue, queue1, queue2;
     private PriorityQueue pqueue, pqueue1;
-    private circularQueue cqueue;
+    private CircularQueue cqueue;
     private LinkedQueue lqueue;
     private GenericArrayListQueue<Integer> gqueue;
 
@@ -27,7 +26,7 @@ public class QueuesTests {
         queue1 = new Queue(5);
         queue2 = new Queue(1);
         pqueue = new PriorityQueue(3);
-        cqueue = new circularQueue(3);
+        cqueue = new CircularQueue(3);
         lqueue = new LinkedQueue();
         gqueue = new GenericArrayListQueue<>();
     }
