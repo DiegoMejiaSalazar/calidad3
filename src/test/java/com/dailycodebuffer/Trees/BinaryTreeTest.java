@@ -1,5 +1,6 @@
 package com.dailycodebuffer.Trees;
 
+import com.dailycodebuffer.Lists.CreateAndDetectLoop;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -33,12 +34,14 @@ public class BinaryTreeTest {
     public void removeNoChildrenTest(){
         binaryTree.put(1);
         binaryTree.remove(1);
+        Assertions.assertNull(binaryTree.find(1));
     }
     @Test
-    public void removeValueDoesntExist(){
+    public void removeValueDoesntAndDoesExist(){
         binaryTree.put(1);
         binaryTree.put(2);
         Assertions.assertFalse(binaryTree.remove(3));
+        Assertions.assertTrue(binaryTree.remove(2));
     }
     @Test
     public void removeOneChild(){
@@ -46,6 +49,8 @@ public class BinaryTreeTest {
         binaryTree.put(2);
         binaryTree.put(7);
         binaryTree.remove(7);
+        Assertions.assertNull(binaryTree.find(5).right);
+        Assertions.assertNotNull(binaryTree.find(5).left);
     }
     @Test
     public void removeTheFather(){

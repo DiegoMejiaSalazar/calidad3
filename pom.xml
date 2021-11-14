@@ -47,6 +47,18 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.5</version>
+                <configuration>
+                    <excludes>
+                        <exclude>**/A_Star.*</exclude>
+                        <exclude>**/BellmanFord.*</exclude>
+                        <exclude>**/DIJSKSTRAS_ALGORITHM.*</exclude>
+                        <exclude>**/dijkstras.*</exclude>
+                        <exclude>**/Cycle.*</exclude>
+                        <exclude>**/Cycles.*</exclude>
+                        <exclude>**/BellmanFord*.*</exclude>
+                        <exclude>**/A_Star*.*</exclude>
+                    </excludes>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
