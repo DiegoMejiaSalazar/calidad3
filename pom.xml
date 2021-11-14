@@ -57,6 +57,7 @@
                         <exclude>**/Cycles.*</exclude>
                         <exclude>**/BellmanFord*.*</exclude>
                         <exclude>**/A_Star*.*</exclude>
+                        <exclude>**/CeilInBinarySearchTree*.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
