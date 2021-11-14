@@ -63,11 +63,4 @@ public class LRUCacheTest {
        RuntimeException exeption = Assertions.assertThrows(RuntimeException.class, ()->new LRUCache(-1));
        Assertions.assertEquals("capacity must greater than 0!", exeption.getMessage());
     }
-    
-    @Test
-    public void headEqualsThanZero(){
-        limitCache.put("Estudiante1", null);
-        RuntimeException exeption = Assertions.assertThrows(RuntimeException.class,()->limitCache.get("Estudiante1"));
-        Assertions.assertEquals("cache cannot be empty!", exeption.getMessage());
-    }
 }
