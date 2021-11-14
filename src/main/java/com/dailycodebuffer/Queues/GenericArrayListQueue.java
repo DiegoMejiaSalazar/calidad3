@@ -64,20 +64,20 @@ public class GenericArrayListQueue<T> {
    *
    * @param args Command line arguments
    */
-  public static void main(String[] args) {
-    GenericArrayListQueue<Integer> queue = new GenericArrayListQueue<>();
-    System.out.println("Running...");
-    assert queue.peek() == null;
-    assert queue.pull() == null;
-    assert queue.add(1);
-    assert queue.peek() == 1;
-    assert queue.add(2);
-    assert queue.peek() == 1;
-    assert queue.pull() == 1;
-    assert queue.peek() == 2;
-    assert queue.pull() == 2;
-    assert queue.peek() == null;
-    assert queue.pull() == null;
-    System.out.println("Finished.");
-  }
+//  public static void main(String[] args) {
+//    GenericArrayListQueue<Integer> queue = new GenericArrayListQueue<>();
+//    System.out.println("Running...");
+//    assert queue.peek() == null;
+//    assert queue.pull() == null;
+//    assert queue.add(1);
+//    assert queue.peek() == 1;
+//    assert queue.add(2);
+//    assert queue.peek() == 1;
+//    assert queue.pull() == 1;
+//    assert queue.peek() == 2;
+//    assert queue.pull() == 2;
+//    assert queue.peek() == null;
+//    assert queue.pull() == null;
+//    System.out.println("Finished.");
+//  }
 }
