@@ -183,29 +183,4 @@ public class DynamicArray<E> implements Iterable<E> {
     }
   }
 
-  /**
-   * This class is the driver for the DynamicArray<E> class it tests a variety of methods and prints
-   * the output
-   */
-//  public static void main(String[] args) {
-//    DynamicArray<String> names = new DynamicArray<>();
-//    names.add("Peubes");
-//    names.add("Marley");
-//
-//    for (String name : names) {
-//      System.out.println(name);
-//    }
-//
-//    names.stream().forEach(System.out::println);
-//
-//    System.out.println(names);
-//
-//    System.out.println(names.getSize());
-//
-//    names.remove(0);
-//
-//    for (String name : names) {
-//      System.out.println(name);
-//    }
-//  }
 }
