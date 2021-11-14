@@ -1,20 +1,7 @@
 package com.dailycodebuffer.Lists;
 
 public class MergeSortedSinglyLinkedList extends SinglyLinkedList {
-
-  public static void main(String[] args) {
-    SinglyLinkedList listA = new SinglyLinkedList();
-    SinglyLinkedList listB = new SinglyLinkedList();
-
-    for (int i = 2; i <= 10; i += 2) {
-      listA.insert(i);
-      listB.insert(i - 1);
-    }
-    assert listA.toString().equals("2->4->6->8->10");
-    assert listB.toString().equals("1->3->5->7->9");
-    assert merge(listA, listB).toString().equals("1->2->3->4->5->6->7->8->9->10");
-  }
-
+    
   /**
    * Merge two sorted SingleLinkedList
    *

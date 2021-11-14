@@ -62,20 +62,6 @@ public class CircleLinkedList<E> {
     return s + " ]";
   }
 
-  public static void main(String args[]){
-    CircleLinkedList cl = new CircleLinkedList<Integer>();
-    cl.append(12);
-    System.out.println(cl);
-    cl.append(23);
-    System.out.println(cl);
-    cl.append(34);
-    System.out.println(cl);
-    cl.append(56);
-    System.out.println(cl);
-    cl.remove(3);
-    System.out.println(cl);
-  }
-
   public E remove(int pos) {
     if (pos > size || pos < 0) {
       // catching errors

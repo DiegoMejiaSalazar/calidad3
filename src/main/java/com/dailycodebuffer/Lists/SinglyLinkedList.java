@@ -114,10 +114,8 @@ public class SinglyLinkedList {
   
   
   /**
-  Reverse a singly linked list from a given node till the end
+  * Reverse a singly linked list from a given node till the end
   **/
-    
-    
   Node reverseList(Node node) {
       Node prev = null, curr = node, next;
       while (curr != null) {
@@ -274,44 +272,6 @@ public class SinglyLinkedList {
   }
 
   /** Driver Code */
-  public static void main(String[] arg) {
-    SinglyLinkedList list = new SinglyLinkedList();
-    assert list.isEmpty();
-    assert list.size() == 0 && list.count() == 0;
-    assert list.toString().equals("");
-
-    /* Test insert function */
-    list.insertHead(5);
-    list.insertHead(7);
-    list.insertHead(10);
-    list.insert(3);
-    list.insertNth(1, 4);
-    assert list.toString().equals("10->7->5->3->1");
-
-    /* Test search function */
-    assert list.search(10) && list.search(5) && list.search(1) && !list.search(100);
-
-    /* Test get function */
-    assert list.getNth(0) == 10 && list.getNth(2) == 5 && list.getNth(4) == 1;
-
-    /* Test delete function */
-    list.deleteHead();
-    list.deleteNth(1);
-    list.delete();
-    assert list.toString().equals("7->3");
-
-    assert list.size == 2 && list.size() == list.count();
-
-    list.clear();
-    assert list.isEmpty();
-
-    try {
-      list.delete();
-      assert false; /* this should not happen */
-    } catch (Exception e) {
-      assert true; /* this should happen */
-    }
-  }
 }
 
 /**

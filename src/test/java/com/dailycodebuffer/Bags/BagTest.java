@@ -1,5 +1,6 @@
 package com.dailycodebuffer.Bags;
 
+import java.util.NoSuchElementException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,14 +20,6 @@ public class BagTest {
     }
     
     @Test
-    public void testAddOneElement() {
-        bag.add("Diego");
-        Assertions.assertEquals(false, bag.isEmpty());
-        Assertions.assertEquals(true, bag.contains("Diego"));
-        Assertions.assertEquals(1, bag.size());
-    }
-    
-    @Test
     public void testAddFiveElement() {
         bag.add("Diego");
         bag.add("Daniel");
@@ -42,7 +35,7 @@ public class BagTest {
         Assertions.assertEquals(5, bag.size());
     }
     
-        @Test
+    @Test
     public void testIfContainsUnExsitingElement() {
         bag.add("Diego");
         bag.add("Daniel");
@@ -50,7 +43,35 @@ public class BagTest {
         bag.add("Pepe");
         bag.add("Juan");
         Assertions.assertEquals(false, bag.isEmpty());
-        //Assertions.assertEquals(true, bag.contains("Oswaldo"));
+        Assertions.assertEquals(false, bag.contains("Oswaldo"));
         Assertions.assertEquals(5, bag.size());
+    }
+    
+    @Test
+    public void testIfElementExistInEmptyBag() {
+        Assertions.assertEquals(true, bag.isEmpty());
+        Assertions.assertEquals(false, bag.contains("Oswaldo"));
+        Assertions.assertEquals(0, bag.size());
+    }
+    
+    @Test
+    public void testGetNextOfEmptyBag() {
+        Assertions.assertEquals(true, bag.isEmpty());
+        Assertions.assertEquals(0, bag.size());
+        NoSuchElementException exception = Assertions.assertThrows(
+                NoSuchElementException.class,
+                () -> bag.iterator().next());
+        
+    }
+    
+    @Test
+    public void testCannotRemoveElementOfBag() {
+        Assertions.assertEquals(true, bag.isEmpty());
+        Assertions.assertEquals(0, bag.size());
+        Assertions.assertThrows(
+                UnsupportedOperationException.class,
+                () -> bag.iterator().remove()
+        );
+        
     }
 }
