@@ -13,13 +13,8 @@ public class FenwickTreeTest {
     }
 
     @Test
-    public void updateTest(){
-
+    public void queryAndUpdateTest(){
         fenwickTree.update(1,3);
-        fenwickTree.update(5,3);
-    }
-    @Test
-    public void queryTest(){
         Assertions.assertNotNull(fenwickTree.query(1));
     }
 }
