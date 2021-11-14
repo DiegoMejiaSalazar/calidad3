@@ -5,8 +5,7 @@
 package com.dailycodebuffer.Heaps;
 
 
-import com.dailycodebuffer.HashMap.Hashing.HashMap;
-import com.dailycodebuffer.HashMap.Hashing.HashMapLinearProbing;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -38,24 +37,17 @@ public class MinPriorityQueueTests {
     }
     
     @Test
-    public void heapSortMinPriorityQueue(){
-    
-    mpqueue.insert(1);
-    mpqueue.insert(3);
-    mpqueue.insert(2);
-    mpqueue.insert(5);
-    mpqueue.heapSort();
-    mpqueue.print();
-    }
-    
-    @Test
     public void deleteMinPriorityQueue(){
     mpqueue.delete();
+    mpqueue.insert(1);
+    Assertions.assertEquals(0,mpqueue.delete());
+    mpqueue.insert(3); 
     mpqueue.insert(1); 
-    mpqueue.insert(0);
+    mpqueue.insert(6);
     mpqueue.insert(2);
     mpqueue.insert(5);
-    mpqueue.delete();
+    Assertions.assertEquals(1,mpqueue.delete());
+    
     }
     
 }
