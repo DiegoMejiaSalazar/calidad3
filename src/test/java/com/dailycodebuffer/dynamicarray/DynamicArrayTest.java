@@ -17,11 +17,13 @@ import org.junit.jupiter.api.Test;
  */
 public class DynamicArrayTest {
     
-    private DynamicArray<String> departments;
-    
+    private DynamicArray<String> departments,departments1;
+    private List<String> addedDepartments;
     @BeforeEach
     void init(){
         departments = new DynamicArray<>();
+        departments1= new DynamicArray<>(3);
+        addedDepartments = new ArrayList<>();
     }
  
     @Test
@@ -30,7 +32,13 @@ public class DynamicArrayTest {
         Assertions.assertEquals("Cochabamba",departments.get(0));
         Assertions.assertEquals(1,departments.getSize());
     }
-   
+    @Test
+    public void addElements(){   
+        departments1.add("Cochabamba");
+        departments1.add("LaPaz");
+        departments1.add("Sta Cruz");
+        departments1.add("Oruro");    
+    }
     @Test
     public void putElement(){
     
@@ -40,12 +48,11 @@ public class DynamicArrayTest {
     
     @Test
     public void removeElement(){
-        
         departments.add("LaPaz");
         departments.add("Beni");
         departments.remove(0);
         departments.remove(4);
-        Assertions.assertEquals(0,departments.getSize()); 
+        
     }
      @Test
     public void emptyArray(){
@@ -53,15 +60,12 @@ public class DynamicArrayTest {
         departments.add("LaPaz");
         departments.add("Beni");
         Assertions.assertFalse(departments.isEmpty());
-        List<String> addedDepartments = new ArrayList<>();
         addedDepartments.add("LaPaz");
         addedDepartments.add("Beni");
         departments.stream().forEach(x -> Assertions.assertTrue(addedDepartments.contains(x)));
         for (String department: departments){
             Assertions.assertTrue(addedDepartments.contains(department));
-        }
-        
-     
+        }            
         
     }
 }

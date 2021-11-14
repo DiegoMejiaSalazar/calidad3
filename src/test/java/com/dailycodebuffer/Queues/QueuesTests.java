@@ -177,4 +177,39 @@ public class QueuesTests {
         cqueue.enQueue(3);
         Assertions.assertEquals(1,cqueue.deQueue());
     }
+    
+    @Test
+    public void deQueueCircularQueue() {
+        cqueue.deQueue();
+        cqueue.enQueue(1);
+        cqueue.deQueue();
+        cqueue.enQueue(2);
+        cqueue.deQueue();
+        cqueue.enQueue(3);
+        cqueue.deQueue();
+        Assertions.assertEquals(-1,cqueue.deQueue());
+        //
+    }
+    @Test
+    public void deleteCircularQueue() {
+        cqueue.enQueue(1);
+        cqueue.deleteQueue();
+        Assertions.assertEquals(null,cqueue.arr);
+    }
+    @Test
+    public void peekCircularQueue() {
+         Assertions.assertEquals(-1,cqueue.peek());
+         cqueue.enQueue(1);
+         Assertions.assertEquals(1,cqueue.peek());
+    }
+    
+    @Test
+    public void fullCircularQueue() {
+        cqueue.enQueue(1);
+        cqueue.enQueue(2);
+        cqueue.enQueue(3);
+        Assertions.assertTrue(cqueue.isFull());
+        cqueue.enQueue(4);
+        Assertions.assertTrue(cqueue.isFull());
+    }
 }
