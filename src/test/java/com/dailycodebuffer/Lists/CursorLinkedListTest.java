@@ -88,8 +88,6 @@ public class CursorLinkedListTest {
     public void getElementFromEmptyList() {
         list.printList();
         Assertions.assertNull(list.get(0));
-        list.indexOf("Diego");
-//        Assertions.assertEquals(-1, );
     }
     
     @Test
