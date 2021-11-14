@@ -53,6 +53,10 @@
                         <exclude>**/BellmanFord.*</exclude>
                         <exclude>**/DIJSKSTRAS_ALGORITHM.*</exclude>
                         <exclude>**/dijkstras.*</exclude>
+                        <exclude>**/Cycle.*</exclude>
+                        <exclude>**/Cycles.*</exclude>
+                        <exclude>**/BellmanFord*.*</exclude>
+                        <exclude>**/A_Star*.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
