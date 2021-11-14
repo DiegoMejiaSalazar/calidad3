@@ -1,18 +1,6 @@
 package com.dailycodebuffer.Lists;
 
 public class SearchSinglyLinkedListRecursion extends SinglyLinkedList {
-  public static void main(String[] args) {
-    SearchSinglyLinkedListRecursion list = new SearchSinglyLinkedListRecursion();
-    for (int i = 1; i <= 10; ++i) {
-      list.insert(i);
-    }
-
-    for (int i = 1; i <= 10; ++i) {
-      assert list.search(i);
-    }
-    assert !list.search(-1) && !list.search(100);
-  }
-
   /**
    * Test if the value key is present in the list using recursion.
    *
