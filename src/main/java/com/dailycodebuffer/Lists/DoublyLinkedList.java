@@ -195,7 +195,6 @@ public class DoublyLinkedList {
    *
    * @param z Element to be deleted
    */
-  @ExcludeFromJacocoReport
   public void deleteNode(Link z) {
     if (z.next == null) {
       deleteTail();
@@ -208,7 +207,6 @@ public class DoublyLinkedList {
     --size;
   }
   
-  @ExcludeFromJacocoReport
   public static void removeDuplicates(DoublyLinkedList l) {
     Link linkOne = l.head;
     while (linkOne.next != null) { // list is present
