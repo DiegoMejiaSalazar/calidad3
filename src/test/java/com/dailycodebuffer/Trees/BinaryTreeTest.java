@@ -15,19 +15,17 @@ public class BinaryTreeTest {
     }
 
     @Test
-    public void insertTest(){
+    public void insertAndFindTest(){
         binaryTree.put(1);
         binaryTree.put(2);
         binaryTree.put(3);
         binaryTree.put(4);
-    }
+        Assertions.assertNotNull(binaryTree.find(1));
+        Assertions.assertNotNull(binaryTree.find(2));
+        Assertions.assertNotNull(binaryTree.find(3));
+        Assertions.assertNotNull(binaryTree.find(4));
 
-    @Test
-    public void findTest(){
-        binaryTree.put(1);
-        binaryTree.put(2);
-        binaryTree.put(3);
-        binaryTree.find(1);
+        Assertions.assertNotNull(binaryTree.find(6));
     }
 
     @Test
