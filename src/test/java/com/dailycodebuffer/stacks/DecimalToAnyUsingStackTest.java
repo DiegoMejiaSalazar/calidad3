@@ -23,5 +23,12 @@ public class DecimalToAnyUsingStackTest {
         Assertions.assertEquals("30", DecimalToAnyUsingStack.convert(30, 10));
         Assertions.assertEquals("1E", DecimalToAnyUsingStack.convert(30, 16));
     }
-
+    
+    @Test
+    public void convertInvalidRadix() {
+        ArithmeticException ex = Assertions.assertThrows(ArithmeticException.class, () -> DecimalToAnyUsingStack.convert(0, 1));
+        Assertions.assertEquals("Invalid input -> number:0,radius:1", ex.getMessage());
+        ArithmeticException ex1 = Assertions.assertThrows(ArithmeticException.class, () -> DecimalToAnyUsingStack.convert(0, 20));
+        Assertions.assertEquals("Invalid input -> number:0,radius:20", ex1.getMessage());
+    }
 }
