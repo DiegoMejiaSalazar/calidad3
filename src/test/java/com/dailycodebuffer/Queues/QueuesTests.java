@@ -98,12 +98,6 @@ public class QueuesTests {
         pqueue.insert(1);
         Assertions.assertEquals(3, pqueue.peek());
     }
-//    @Test
-//    public void emptyCircularQueue(){
-//    Assertions.assertTrue(cqueue.isEmpty());
-//    cqueue.enQueue(3);
-//    Assertions.assertFalse(cqueue.isEmpty());
-//    }
 
     @Test
     public void emptyLinkedQueue() {
@@ -159,8 +153,14 @@ public class QueuesTests {
 
     @Test
     public void peekGenericQueue() {
+        Assertions.assertNull(gqueue.peek());
         gqueue.add(5);
         Assertions.assertEquals(5, gqueue.peek());
+    }
+    
+    @Test
+    public void pullFromEmptyQueue() {
+        Assertions.assertNull(gqueue.pull());
     }
 
     @Test
