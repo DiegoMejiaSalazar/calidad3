@@ -60,6 +60,7 @@
                         <exclude>**/MatrixGraphs.*</exclude>
                         <exclude>**/AdjacencyMatrixGraph.*</exclude>
                         <exclude>**/CeilInBinarySearchTree*.*</exclude>
+                        <exclude>**/Kruskal.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
