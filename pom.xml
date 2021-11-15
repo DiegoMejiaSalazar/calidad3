@@ -59,6 +59,7 @@
                         <exclude>**/A_Star*.*</exclude>
                         <exclude>**/MatrixGraphs.*</exclude>
                         <exclude>**/AdjacencyMatrixGraph.*</exclude>
+                        <exclude>**/CeilInBinarySearchTree*.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>

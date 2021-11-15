@@ -22,27 +22,7 @@ public class BSTIterative {
     root = null;
   }
 
-  /** main function for tests */
-  public static void main(String[] args) {
-    BSTIterative tree = new BSTIterative();
-    tree.add(3);
-    tree.add(2);
-    tree.add(9);
-    assert !tree.find(4) : "4 is not yet present in BST";
-    assert tree.find(2) : "2 should be present in BST";
-    tree.remove(2);
-    assert !tree.find(2) : "2 was just deleted from BST";
-    tree.remove(1);
-    assert !tree.find(1) : "Since 1 was not present so find deleting would do no change";
-    tree.add(30);
-    tree.add(40);
-    assert tree.find(40) : "40 was inserted but not found";
-    /*
-       Will print following order
-       3 9 30 40
-    */
-    tree.inorder();
-  }
+
 
   /**
    * A method to insert a new value in BST. If the given value is already present in BST the
