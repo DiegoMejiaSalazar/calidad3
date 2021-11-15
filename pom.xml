@@ -61,6 +61,7 @@
                         <exclude>**/AdjacencyMatrixGraph.*</exclude>
                         <exclude>**/CeilInBinarySearchTree*.*</exclude>
                         <exclude>**/Kruskal.*</exclude>
+                        <exclude>**/BipartiteGrapfDFS.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
