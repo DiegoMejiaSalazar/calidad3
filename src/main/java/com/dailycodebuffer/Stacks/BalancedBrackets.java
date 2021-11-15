@@ -14,7 +14,7 @@ import java.util.Stack;
  * @author <a href="https://github.com/khalil2535">khalil2535<a>
  * @author shellhub
  */
-class BalancedBrackets {
+public class BalancedBrackets {
 
   /**
    * Check if {@code leftBracket} and {@code rightBracket} is paired or not
@@ -69,10 +69,5 @@ class BalancedBrackets {
       }
     }
     return bracketsStack.isEmpty();
-  }
-
-  public static void main(String[] args) {
-    assert isBalanced("[()]{}{[()()]()}");
-    assert !isBalanced("[(])");
   }
 }
