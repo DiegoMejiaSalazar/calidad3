@@ -62,6 +62,14 @@
                         <exclude>**/CeilInBinarySearchTree*.*</exclude>
                         <exclude>**/Kruskal.*</exclude>
                         <exclude>**/BipartiteGrapfDFS.*</exclude>
+                        <exclude>**/JaCoCoDemoApplication.*</exclude>
+                        <exclude>**/CircularBuffer.*</exclude>
+                        <exclude>**/CircularBuffer*.*</exclude>
+                        <exclude>**/CreateBSTFromSortedArray.*</exclude>
+                        <exclude>**/CreateBinaryTreeFromInorderPreorder.*</exclude>
+                        <exclude>**/LCA.*</exclude>
+                        <exclude>**/VerticalOrderTraversal.*</exclude>
+                        <exclude>**/ValidBSTOrNot.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
