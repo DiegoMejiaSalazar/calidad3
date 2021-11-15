@@ -58,11 +58,15 @@ public class BSTIterativeTest {
         bstIterative.add(5);
         bstIterative.add(6);
         bstIterative.add(8);
+        Assertions.assertTrue(bstIterative.find(6));
         bstIterative.preorder();
+        Assertions.assertTrue(bstIterative.find(5));
+
     }
     @Test
     public void preOrderWithoutDataTest(){
         bstIterative.preorder();
+        Assertions.assertFalse(bstIterative.find(10));
     }
 
     @Test
@@ -70,11 +74,14 @@ public class BSTIterativeTest {
         bstIterative.add(5);
         bstIterative.add(6);
         bstIterative.add(8);
+        Assertions.assertTrue(bstIterative.find(8));
         bstIterative.postorder();
         bstIterative.remove(5);
         bstIterative.remove(6);
         bstIterative.remove(8);
         bstIterative.postorder();
+        Assertions.assertFalse(bstIterative.find(8));
+
     }
 
     @Test
@@ -82,11 +89,13 @@ public class BSTIterativeTest {
         bstIterative.add(5);
         bstIterative.add(6);
         bstIterative.add(8);
+        Assertions.assertTrue(bstIterative.find(5));
         bstIterative.inorder();
         bstIterative.remove(5);
         bstIterative.remove(6);
         bstIterative.remove(8);
         bstIterative.inorder();
+        Assertions.assertFalse(bstIterative.find(5));
 
     }
 
