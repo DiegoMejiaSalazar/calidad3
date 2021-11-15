@@ -3,14 +3,6 @@ package com.dailycodebuffer.Stacks;
 import java.util.Stack;
 
 public class DecimalToAnyUsingStack {
-  public static void main(String[] args) {
-    assert convert(0, 2).equals("0");
-    assert convert(30, 2).equals("11110");
-    assert convert(30, 8).equals("36");
-    assert convert(30, 10).equals("30");
-    assert convert(30, 16).equals("1E");
-  }
-
   /**
    * Convert decimal number to another radix
    *
@@ -19,7 +11,7 @@ public class DecimalToAnyUsingStack {
    * @return another radix
    * @throws ArithmeticException if <tt>number</tt> or <tt>radius</tt> is invalid
    */
-  private static String convert(int number, int radix) {
+  public static String convert(int number, int radix) {
     if (radix < 2 || radix > 16) {
       throw new ArithmeticException(
           String.format("Invalid input -> number:%d,radius:%d", number, radix));
