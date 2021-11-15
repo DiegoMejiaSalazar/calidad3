@@ -35,11 +35,4 @@ public class DuplicateBrackets {
         }
         return false;
     }
-
-    public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        System.out.println(check(str));
-    }
-
 }

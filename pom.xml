@@ -70,6 +70,7 @@
                         <exclude>**/LCA.*</exclude>
                         <exclude>**/VerticalOrderTraversal.*</exclude>
                         <exclude>**/ValidBSTOrNot.*</exclude>
+                        <exclude>**/InfixToPostfix.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
