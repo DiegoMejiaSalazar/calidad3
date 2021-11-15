@@ -11,27 +11,8 @@ import java.util.Stack;
 
 public class ReverseStack {
 
-    public static void main(String args[]){
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of elements you wish to insert in the stack");
-        int n = sc.nextInt();
-        int i;
-        Stack<Integer> stack = new Stack<Integer>();
-        System.out.println("Enter the stack elements");
-        for(i = 0; i < n ; i++)
-            stack.push(sc.nextInt());
-        sc.close();
-        reverseStack(stack);
-        System.out.println("The reversed stack is:");
-        while(!stack.isEmpty()){
-            System.out.print(stack.peek()+",");
-            stack.pop();
-        }
-
-    }
-
-    private static void reverseStack(Stack<Integer> stack) {
+    public static void reverseStack(Stack<Integer> stack) {
         if(stack.isEmpty()){
             return;
         }
