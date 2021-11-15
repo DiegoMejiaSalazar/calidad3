@@ -69,7 +69,7 @@
                         <exclude>**/CreateBinaryTreeFromInorderPreorder.*</exclude>
                         <exclude>**/LCA.*</exclude>
                         <exclude>**/VerticalOrderTraversal.*</exclude>
-                        <exclude>**/ValidBSTOrNot.*</exclude>
+                        <exclude>**/ValidBSTOrNot*.*</exclude>
                         <exclude>**/InfixToPostfix.*</exclude>
                         <exclude>**/RedBlackBST*.*</exclude>
                         <exclude>**/GenericTree*.*</exclude>
@@ -80,6 +80,7 @@
                         <exclude>**/StackOfLinkedList.*</exclude>
                         <exclude>**/LinkedListStack.*</exclude>
                         <exclude>**/PrintTopViewofTree*.*</exclude>
+                        <exclude>**/Tree.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>

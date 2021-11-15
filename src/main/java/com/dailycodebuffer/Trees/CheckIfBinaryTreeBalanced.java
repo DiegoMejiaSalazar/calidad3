@@ -188,7 +188,7 @@ import java.util.HashMap;
      *   /
      *  0
      */
-    private BinaryTree buildUnbalancedTree() {
+    public BinaryTree buildUnbalancedTree() {
         BinaryTree tree = new BinaryTree();
         tree.root = new BTNode(0);
 
@@ -225,7 +225,7 @@ import java.util.HashMap;
      *      /              /
      *     0              0
      */
-    private BinaryTree buildBalancedTree() {
+    public BinaryTree buildBalancedTree() {
         BinaryTree tree = new BinaryTree();
         tree.root = new BTNode(0);
 
@@ -248,27 +248,4 @@ import java.util.HashMap;
         return tree;
     }
 
-    /**
-     * Main
-     */
-    public static void main(String[] args) {
-        // We create a new object to check the binary trees for balance
-        CheckIfBinaryTreeBalanced balanceCheck = new CheckIfBinaryTreeBalanced();
-
-        // Build a balanced and unbalanced binary tree
-        BinaryTree balancedTree = balanceCheck.buildBalancedTree();
-        BinaryTree unbalancedTree = balanceCheck.buildUnbalancedTree();
-
-        // Run basic tests on the algorithms to check for balance
-        boolean isBalancedRB = balanceCheck.isBalancedRecursive(balancedTree); // true
-        boolean isBalancedRU = balanceCheck.isBalancedRecursive(unbalancedTree); // false
-        boolean isBalancedIB = balanceCheck.isBalancedIterative(balancedTree); // true
-        boolean isBalancedIU = balanceCheck.isBalancedIterative(unbalancedTree); // false
-
-        // Print the results
-        System.out.println("isBalancedRB: " + isBalancedRB);
-        System.out.println("isBalancedRU: " + isBalancedRU);
-        System.out.println("isBalancedIB: " + isBalancedIB);
-        System.out.println("isBalancedIU: " + isBalancedIU);
-    }
  }

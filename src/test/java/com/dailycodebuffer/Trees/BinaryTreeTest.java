@@ -94,32 +94,53 @@ public class BinaryTreeTest {
     public void bfsTest(){
         BinaryTree.Node node;
         binaryTree.bfs(node = new BinaryTree.Node(5));
+        Assertions.assertNotNull(node.data);
         binaryTree.bfs(node = new BinaryTree.Node(2));
+        Assertions.assertNotNull(node.data);
         binaryTree.bfs(node = new BinaryTree.Node(3));
+        Assertions.assertNotNull(node.data);
         binaryTree.bfs(node = new BinaryTree.Node(1));
+        Assertions.assertNotNull(node.data);
+        Assertions.assertNull(node.parent);
     }
     @Test
     public void postOrderTest(){
         BinaryTree.Node node;
         binaryTree.postOrder(node = new BinaryTree.Node(5));
+        Assertions.assertNotNull(node.data);
         binaryTree.postOrder(node = new BinaryTree.Node(50));
+        Assertions.assertNotNull(node.data);
         binaryTree.postOrder(node = new BinaryTree.Node(1));
+        Assertions.assertNotNull(node.data);
         binaryTree.postOrder(node = new BinaryTree.Node(2));
+        Assertions.assertNotNull(node.data);
+        Assertions.assertNull(node.left);
+
     }
     @Test
     public void preOrderTest(){
         BinaryTree.Node node;
         binaryTree.preOrder(node = new BinaryTree.Node(5));
+        Assertions.assertNotNull(node.data);
         binaryTree.preOrder(node = new BinaryTree.Node(9));
+        Assertions.assertNotNull(node.data);
         binaryTree.preOrder(node = new BinaryTree.Node(1));
+        Assertions.assertNotNull(node.data);
         binaryTree.preOrder(node = new BinaryTree.Node(2));
+        Assertions.assertNotNull(node.data);
+        Assertions.assertNull(node.right);
     }
     @Test
     public void inOrderTest(){
         BinaryTree.Node node;
         binaryTree.inOrder(node = new BinaryTree.Node(5));
+        Assertions.assertNotNull(node.data);
         binaryTree.inOrder(node = new BinaryTree.Node(1));
+        Assertions.assertNotNull(node.data);
         binaryTree.inOrder(node = new BinaryTree.Node(8));
+        Assertions.assertNotNull(node.data);
         binaryTree.inOrder(node = new BinaryTree.Node(2));
+        Assertions.assertNotNull(node.data);
+        Assertions.assertNull(node.parent);
     }
 }
