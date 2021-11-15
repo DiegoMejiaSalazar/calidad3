@@ -75,8 +75,18 @@ public class HashMapHashingTests {
         Assertions.assertEquals(0, linearhash.hashing(6));
         linearhash.insertHash(5);
         linearhash.insertHash(4);
-        linearhash.insertHash(3);
+        linearhash.insertHash(30);
+        linearhash.insertHash(3000);
+        linearhash.insertHash(30000);
+        linearhash.insertHash(300000);
+        linearhash.insertHash(307);
+        linearhash.insertHash(370);
+        linearhash.insertHash(3777);
+        linearhash.insertHash(3070);
+        linearhash.insertHash(37007);
         linearhash.displayHashtable();
+        linearhash.deleteHash(30);
+        linearhash.deleteHash(181818);
     }
 
     @Test
