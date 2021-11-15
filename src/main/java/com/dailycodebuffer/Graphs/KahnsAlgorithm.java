@@ -56,18 +56,6 @@ class AdjacencyList<E extends Comparable<E>>{
         return adj.keySet();
     }
     
-    /**
-     * Prints the adjacency list
-     */
-    void printGraph(){
-        for(E vertex: adj.keySet()){
-            System.out.print(vertex+" : ");
-            for(E adjacent: adj.get(vertex)){
-                System.out.print(adjacent+" ");
-            }
-            System.out.println();
-        }
-    }
 }
 
 class TopologicalSort<E extends Comparable<E>>{
@@ -127,29 +115,5 @@ class TopologicalSort<E extends Comparable<E>>{
         
         return answer;
         
-    }
-}
-
-/**
- * A driver class that sorts a given graph in topological order.
- */ 
-public class KahnsAlgorithm{
-    public static void main(String[] args){
-        
-        //Graph definition and initialization
-        AdjacencyList<String> graph = new AdjacencyList<>();
-        graph.addEdge("a","b");
-        graph.addEdge("c","a");
-        graph.addEdge("a","d");
-        graph.addEdge("b","d");
-        graph.addEdge("c","u");
-        graph.addEdge("u","b");
-        
-        TopologicalSort<String> topSort = new TopologicalSort<>(graph);
-        
-        //Printing the order
-        for(String s: topSort.topSortOrder()){
-            System.out.print(s+" ");
-        }
     }
 }
