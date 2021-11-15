@@ -26,7 +26,7 @@ public class HeapElementTests {
         element = new HeapElement(2.0, info);
         element2 = new HeapElement(3, info);
         element3 = new HeapElement(keyI, info);
-        element4 = new HeapElement(keyD, info);
+        element4 = new HeapElement(keyD, null);
         element5 = new HeapElement(2);
         element6 = new HeapElement(2.0);
         element7 = new HeapElement(keyI);
@@ -50,12 +50,16 @@ public class HeapElementTests {
 
     @Test
     public void equalsHeapElement() {
+        Assertions.assertFalse(element.equals(null));
         Assertions.assertTrue(element2.equals(heapelem));
+        Assertions.assertFalse((element.equals(info)));
     }
 
     @Test
     public void hashCodeHeapElement() {
         Assertions.assertEquals(-1294329558, element2.hashCode());
+        Assertions.assertEquals(93, element4.hashCode());
+
     }
 
 }
