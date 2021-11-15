@@ -79,6 +79,7 @@
                         <exclude>**/MinHeap.*</exclude>
                         <exclude>**/StackOfLinkedList.*</exclude>
                         <exclude>**/LinkedListStack.*</exclude>
+                        <exclude>**/PrintTopViewOftree*.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
