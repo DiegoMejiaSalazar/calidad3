@@ -41,7 +41,7 @@ public class HashMapHashingTests {
         //
         hash.insertHash(5);
         hash.insertHash(6);
-        hash.deleteHash(6);
+        hash.deleteHash(5);
         hash.displayHashtable();
     }
 
@@ -53,6 +53,7 @@ public class HashMapHashingTests {
 
     @Test
     public void findKeyList() {
+        Assertions.assertNull(lista.findKey(4));
         lista.insert(1);
         lista.insert(2);
         lista.insert(3);
@@ -62,10 +63,15 @@ public class HashMapHashingTests {
 
     @Test
     public void deleteNodeList() {
+        Assertions.assertTrue(lista.isEmpty());
         lista.delete(0);
         lista.insert(1);
-        lista.delete(1);
-        Assertions.assertTrue(lista.isEmpty());
+        lista.insert(3);
+        lista.insert(5);
+        lista.insert(5);
+        lista.delete(5);
+        lista.delete(10);
+        Assertions.assertFalse(lista.isEmpty());
     }
 
     @Test
@@ -87,6 +93,7 @@ public class HashMapHashingTests {
         linearhash.displayHashtable();
         linearhash.deleteHash(30);
         linearhash.deleteHash(181818);
+        Assertions.assertNotNull(linearhash.hashing(-1));
     }
 
     @Test
@@ -102,7 +109,6 @@ public class HashMapHashingTests {
         linearhash.checkLoadFactor();
         linearhash.insertHash(3);
         linearhash.checkLoadFactor();
-        //
     }
 
     @Test
@@ -112,6 +118,7 @@ public class HashMapHashingTests {
         linearhash.insertHash(4);
         linearhash.insertHash(3);
         Assertions.assertEquals(0, linearhash.findHash(3));
+        Assertions.assertEquals(-1, linearhash.findHash(6));
     }
 
 }

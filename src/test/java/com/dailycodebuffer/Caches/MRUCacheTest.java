@@ -6,6 +6,7 @@
 
 package com.dailycodebuffer.Caches;
 
+import com.dailycodebuffer.HashMap.Hashing.HashMap;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,8 +18,8 @@ import org.junit.jupiter.api.Disabled;
  */
 public class MRUCacheTest {
     private MRUCache<String, String> cache;
-    private MRUCache<String, String> limitCache; 
-    
+    private MRUCache<String, String> limitCache;
+
     @BeforeEach
     void init(){
         cache = new MRUCache();
@@ -52,7 +53,7 @@ public class MRUCacheTest {
     
     @Test
     public void getNullInOneKey(){
-        Assertions.assertNull(limitCache.get("Estudiante1"));              
+        Assertions.assertNull(limitCache.get("Estudiante1"));
     }
     
     @Test
