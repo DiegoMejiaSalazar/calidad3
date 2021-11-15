@@ -71,6 +71,8 @@
                         <exclude>**/VerticalOrderTraversal.*</exclude>
                         <exclude>**/ValidBSTOrNot.*</exclude>
                         <exclude>**/InfixToPostfix.*</exclude>
+                        <exclude>**/RedBlackBST*.*</exclude>
+                        <exclude>**/GenericTree*.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
