@@ -78,6 +78,7 @@
                         <exclude>**/MaxHeap.*</exclude>
                         <exclude>**/MinHeap.*</exclude>
                         <exclude>**/StackOfLinkedList.*</exclude>
+                        <exclude>**/LinkedListStack.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
