@@ -57,7 +57,11 @@
                         <exclude>**/Cycles.*</exclude>
                         <exclude>**/BellmanFord*.*</exclude>
                         <exclude>**/A_Star*.*</exclude>
+                        <exclude>**/MatrixGraphs.*</exclude>
+                        <exclude>**/AdjacencyMatrixGraph.*</exclude>
                         <exclude>**/CeilInBinarySearchTree*.*</exclude>
+                        <exclude>**/Kruskal.*</exclude>
+                        <exclude>**/BipartiteGrapfDFS.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
