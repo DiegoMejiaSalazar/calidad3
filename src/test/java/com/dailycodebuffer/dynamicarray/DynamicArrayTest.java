@@ -16,46 +16,57 @@ import org.junit.jupiter.api.Test;
  * @author Andy_
  */
 public class DynamicArrayTest {
-    
-    private DynamicArray<String> departments,departments1;
+
+    private DynamicArray<String> departments, departments1;
     private List<String> addedDepartments;
+
     @BeforeEach
-    void init(){
+    void init() {
         departments = new DynamicArray<>();
-        departments1= new DynamicArray<>(3);
+        departments1 = new DynamicArray<>(3);
         addedDepartments = new ArrayList<>();
     }
- 
+
     @Test
-    public void addOneElement(){   
+    public void addOneElement() {
         departments.add("Cochabamba");
-        Assertions.assertEquals("Cochabamba",departments.get(0));
-        Assertions.assertEquals(1,departments.getSize());
+        Assertions.assertEquals("Cochabamba", departments.get(0));
+        Assertions.assertEquals(1, departments.getSize());
     }
+
     @Test
-    public void addElements(){   
+    public void addElements() {
         departments1.add("Cochabamba");
         departments1.add("LaPaz");
         departments1.add("Sta Cruz");
-        departments1.add("Oruro");    
+        departments1.add("Oruro");
+        departments1.iterator().remove();
+        Assertions.assertEquals(3, departments1.getSize());
+        departments1.iterator().remove();
+        departments1.iterator().remove();
+        departments1.iterator().remove();
+        Assertions.assertThrows(ArrayIndexOutOfBoundsException.class, () -> departments1.iterator().remove());
+        
     }
+
     @Test
-    public void putElement(){
-    
-    departments.put(1,"SantaCruz");
-    Assertions.assertEquals("SantaCruz",departments.get(1));
+    public void putElement() {
+        departments.put(1, "SantaCruz");
+        Assertions.assertEquals("SantaCruz", departments.get(1));
     }
-    
+
     @Test
-    public void removeElement(){
+    public void removeElement() {
         departments.add("LaPaz");
         departments.add("Beni");
         departments.remove(0);
         departments.remove(4);
-        
+        Assertions.assertTrue(departments.isEmpty());
+
     }
-     @Test
-    public void emptyArray(){
+
+    @Test
+    public void emptyArray() {
         Assertions.assertTrue(departments.isEmpty());
         departments.add("LaPaz");
         departments.add("Beni");
@@ -63,9 +74,9 @@ public class DynamicArrayTest {
         addedDepartments.add("LaPaz");
         addedDepartments.add("Beni");
         departments.stream().forEach(x -> Assertions.assertTrue(addedDepartments.contains(x)));
-        for (String department: departments){
+        for (String department : departments) {
             Assertions.assertTrue(addedDepartments.contains(department));
-        }            
-        
+        }
+
     }
 }
