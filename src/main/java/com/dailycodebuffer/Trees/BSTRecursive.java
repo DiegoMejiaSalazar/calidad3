@@ -23,29 +23,6 @@ public class BSTRecursive {
   BSTRecursive() {
     root = null;
   }
-
-  /** main function for tests */
-  public static void main(String[] args) {
-    BSTRecursive tree = new BSTRecursive();
-    tree.add(5);
-    tree.add(10);
-    tree.add(9);
-    assert !tree.find(4) : "4 is not yet present in BST";
-    assert tree.find(10) : "10 should be present in BST";
-    tree.remove(9);
-    assert !tree.find(9) : "9 was just deleted from BST";
-    tree.remove(1);
-    assert !tree.find(1) : "Since 1 was not present so find deleting would do no change";
-    tree.add(20);
-    tree.add(70);
-    assert tree.find(70) : "70 was inserted but not found";
-    /*
-     Will print in following order
-     5 10 20 70
-    */
-    tree.inorder();
-  }
-
   /**
    * Recursive method to delete a data if present in BST.
    *
