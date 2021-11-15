@@ -75,6 +75,8 @@
                         <exclude>**/GenericTree*.*</exclude>
                         <exclude>**/LevelOrderTraversal*.*</exclude>
                         <exclude>**/LevelOrderTraversalQueue*.*</exclude>
+                        <exclude>**/MaxHeap.*</exclude>
+                        <exclude>**/MinHeap.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
