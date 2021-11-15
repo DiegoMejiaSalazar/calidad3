@@ -69,7 +69,7 @@
                         <exclude>**/CreateBinaryTreeFromInorderPreorder.*</exclude>
                         <exclude>**/LCA.*</exclude>
                         <exclude>**/VerticalOrderTraversal.*</exclude>
-                        <exclude>**/ValidBSTOrNot.*</exclude>
+                        <exclude>**/ValidBSTOrNot*.*</exclude>
                         <exclude>**/InfixToPostfix.*</exclude>
                         <exclude>**/RedBlackBST*.*</exclude>
                         <exclude>**/GenericTree*.*</exclude>
@@ -77,6 +77,7 @@
                         <exclude>**/LevelOrderTraversalQueue*.*</exclude>
                         <exclude>**/MaxHeap.*</exclude>
                         <exclude>**/MinHeap.*</exclude>
+                        <exclude>**/PrintTopViewofTree*.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
