@@ -11,10 +11,6 @@ import java.util.LinkedList;
 /**
  * An algorithm that sorts a graph in toplogical order.
  */
-
-/**
- * A class that represents the adjaceny list of a graph
- */
 class AdjacencyList<E extends Comparable<E>>{
     
     Map<E,ArrayList<E>> adj;

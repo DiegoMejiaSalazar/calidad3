@@ -62,6 +62,9 @@
                         <exclude>**/CeilInBinarySearchTree*.*</exclude>
                         <exclude>**/Kruskal.*</exclude>
                         <exclude>**/BipartiteGrapfDFS.*</exclude>
+                        <exclude>**/JaCoCoDemoApplication.*</exclude>
+                        <exclude>**/CircularBuffer.*</exclude>
+                        <exclude>**/CircularBuffer*.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
