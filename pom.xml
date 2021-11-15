@@ -73,6 +73,8 @@
                         <exclude>**/InfixToPostfix.*</exclude>
                         <exclude>**/RedBlackBST*.*</exclude>
                         <exclude>**/GenericTree*.*</exclude>
+                        <exclude>**/LevelOrderTraversal*.*</exclude>
+                        <exclude>**/LevelOrderTraversalQueue*.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
