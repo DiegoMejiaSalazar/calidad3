@@ -13,29 +13,6 @@ import java.util.LinkedList;
  * @author Unknown
  */
 public class MatrixGraphs {
-
-  public static void main(String args[]) {
-    AdjacencyMatrixGraph graph = new AdjacencyMatrixGraph(10);
-    graph.addEdge(1, 2);
-    graph.addEdge(1, 5);
-    graph.addEdge(2, 5);
-    graph.addEdge(1, 2);
-    graph.addEdge(2, 3);
-    graph.addEdge(3, 4);
-    graph.addEdge(4, 1);
-    graph.addEdge(2, 3);
-    graph.addEdge(3, 9);
-    graph.addEdge(9, 1);
-    graph.addEdge(9, 8);
-    graph.addEdge(1, 8);
-    graph.addEdge(5, 6);
-    System.out.println("The graph matrix:");
-    System.out.println(graph);
-    System.out.println("Depth first order beginning at node '1':");
-    System.out.println(graph.depthFirstOrder(1));
-    System.out.println("Breadth first order beginning at node '1':");
-    System.out.println(graph.breadthFirstOrder(1));
-  }
 }
 
 /**

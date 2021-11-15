@@ -49,28 +49,4 @@ public class FloydWarshall {
       System.out.println();
     }
   }
-
-  public static void main(String... arg) {
-    Scanner scan = new Scanner(System.in);
-    System.out.println("Enter the number of vertices");
-    int numberOfVertices = scan.nextInt();
-    int[][] adjacencyMatrix = new int[numberOfVertices + 1][numberOfVertices + 1];
-    System.out.println("Enter the Weighted Matrix for the graph");
-    for (int source = 1; source <= numberOfVertices; source++) {
-      for (int destination = 1; destination <= numberOfVertices; destination++) {
-        adjacencyMatrix[source][destination] = scan.nextInt();
-        if (source == destination) {
-          adjacencyMatrix[source][destination] = 0;
-          continue;
-        }
-        if (adjacencyMatrix[source][destination] == 0) {
-          adjacencyMatrix[source][destination] = INFINITY;
-        }
-      }
-    }
-    System.out.println("The Transitive Closure of the Graph");
-    FloydWarshall floydwarshall = new FloydWarshall(numberOfVertices);
-    floydwarshall.floydwarshall(adjacencyMatrix);
-    scan.close();
-  }
 }
