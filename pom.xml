@@ -57,6 +57,8 @@
                         <exclude>**/Cycles.*</exclude>
                         <exclude>**/BellmanFord*.*</exclude>
                         <exclude>**/A_Star*.*</exclude>
+                        <exclude>**/MatrixGraphs.*</exclude>
+                        <exclude>**/AdjacencyMatrixGraph.*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
