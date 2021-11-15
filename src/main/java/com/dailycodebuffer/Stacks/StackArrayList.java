@@ -14,33 +14,6 @@ import java.util.EmptyStackException;
  */
 public class StackArrayList {
 
-  /** Driver Code */
-  public static void main(String[] args) {
-    StackArrayList stack = new StackArrayList();
-    assert stack.isEmpty();
-
-    for (int i = 1; i <= 5; ++i) {
-      stack.push(i);
-      assert stack.size() == i;
-    }
-
-    assert stack.size() == 5;
-    assert stack.peek() == 5 && stack.pop() == 5 && stack.peek() == 4;
-
-    /* pop elements at the top of this stack one by one */
-    while (!stack.isEmpty()) {
-      stack.pop();
-    }
-    assert stack.isEmpty();
-
-    try {
-      stack.pop();
-      assert false; /* this should not happen */
-    } catch (EmptyStackException e) {
-      assert true; /* this should happen */
-    }
-  }
-
   /** ArrayList representation of the stack */
   private ArrayList<Integer> stack;
 
